@@ -1,0 +1,85 @@
+#contentWrapper {
+  color: #fff;
+  background: url('../images/7contactUs/1_connect_bg.png') no-repeat top center;
+  background-size: 19.2rem 9rem;
+  .content1200 {
+    padding-top: 1.63rem;
+    .aside {
+      width: 2.38rem;
+      margin: .81rem 1.15rem 0 -.41rem;
+      ul.companyList {
+        li.companyName {
+          margin-bottom: .16rem;
+          text-align: right;
+          letter-spacing: 2px;
+          cursor: pointer;
+          transition: all ease .3s;
+          span {
+            vertical-align: middle;
+          }
+          &.active {
+            color: #ed761e;
+            font-size: .34rem;
+            margin: .3rem 0;
+            &::after {
+              background: rgba($color: #ed761e, $alpha: 1);
+            }
+          }
+          &:first-child {
+            margin-top: 0;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &::after {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: .3rem;
+            width: .14rem;
+            height: .14rem;
+            border-radius: 50%;
+            background: rgba($color: #ffffff, $alpha: .5);
+            transition: all ease .3s;
+          }
+        }
+      }
+    }
+    .companyInfo {
+      width: 7.20rem;
+      padding-bottom: .45rem;
+      .mapBox {
+        height: 3.80rem;
+        border: 1px solid #fff;
+        padding: .1rem;
+        margin-bottom: .6rem;
+        #mapContent {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .companyText {
+        li {
+          float: left;
+          width: 50%;
+          height: 1.26rem;
+          padding-right: .43rem;
+          h3 {
+            margin-bottom: .3rem;
+            letter-spacing: 2px;
+            font-family: 'MicrosoftYaHei-Bold';
+            font-weight: bold;
+          }
+          p {
+            margin: -.075rem 0;
+            line-height: 1.85;
+            letter-spacing: 2px;
+            &#companyEmail{
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+}

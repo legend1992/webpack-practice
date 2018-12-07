@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>webpack practice</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="webpack multi page">
+</head>
+
+<body>
+  <script>
+    if (window.location.href.indexOf('index.html') < 0) {
+      window.location.href = window.location.href + 'index.html';
+    }
+  </script>
+  <script>
+    var inPc = window.sessionStorage.getItem('isPc');
+    function IsPC() {
+      var userAgentInfo = navigator.userAgent;
+      var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+      var flag = true;
+      for (let i = 0; i < Agents.length; i++) {
+        if (userAgentInfo.indexOf(Agents[i]) > 0) {
+          flag = false;
+          break;
+        }
+      }
+      return flag;
+    }
+    if (!IsPC()) {
+      window.location.href = window.location.origin + "/h5/index.html";
+    }
+  </script>
+  <div id="headerWrapper"></div>
+  <div id="contentWrapper">
+    <div id="news" class="firstLevelContent">
+      <div class="content1200">
+        <h1>新闻动态</h1>
+        <h2>News  information</h2>
+        <ul class="newsList clear">
+          <li>
+            <a href="./news-detail.html?newsId=1">
+              <img src="${require(`./images/2index/13_home_news.jpg`)}" alt="图">
+              <div class="content">
+                <h3>5日视频直播开拓者vs独行侠 利拉德对决东契奇</h3>
+                <p>9月29日，新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容...</p>
+                <button>查看详情</button>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./news-detail.html?newsId=2">
+              <img src="${require(`./images/2index/14_home_news.jpg`)}" alt="图">
+              <div class="content">
+                <h3>5日视频直播国王vs太阳 萨城力争冲击西部前八</h3>
+                <p>北京时间5月10日，新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容...</p>
+                <button>查看详情</button>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./news-detail.html?newsId=3">
+              <img src="${require(`./images/2index/15_home_news.jpg`)}" alt="图">
+              <div class="content">
+                <h3>5日视频直播马刺vs爵士 德罗赞和米切尔欲演飙分战</h3>
+                <p>2018年11月2日，新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容...</p>
+                <button>查看详情</button>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="partner" class="firstLevelContent">
+      <h1>合作机构</h1>
+      <h2>Cooperation Agency</h2>
+      <ul class="clear content1200">
+        <li><img src="${require(`./images/2index/5_home_hezuo_logo.png`)}" alt="恒创集团"></li>
+        <li>
+          <a href="http://www.zhaofuziben.com/" target="_blank"><img src="${require(`./images/2index/6_home_hezuo_logo.png`)}" alt="兆富资本"></a>
+        </li>
+        <li><img src="${require(`./images/2index/7_home_hezuo_logo.png`)}" alt="中国建设银行"></li>
+        <li><img src="${require(`./images/2index/8_home_hezuo_logo.png`)}" alt="中国工商银行"></li>
+        <li><img src="${require(`./images/2index/9_home_hezuo_logo.png`)}" alt="交通银行"></li>
+        <li><img src="${require(`./images/2index/10_home_hezuo_logo.png`)}" alt="中国农业银行"></li>
+        <li><img src="${require(`./images/2index/11_home_hezuo_logo.png`)}" alt="招商银行"></li>
+        <li><img src="${require(`./images/2index/12_home_hezuo_logo.png`)}" alt="中国银行"></li>
+      </ul>
+    </div>
+  </div>
+  <div id="footerWrapper"></div>
+</body>
+
+</html>

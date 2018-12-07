@@ -1,0 +1,214 @@
+html {
+  height: 100%;
+  font-size: 100px;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  min-width: 1280px;
+  line-height: 1;
+  font-size: .18rem;
+  color: #333333;
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.firstLevelContent{
+  h1 {
+    margin-top: .88rem;
+    margin-bottom: .24rem;
+    font-size: .36rem;
+    letter-spacing: .04rem;
+    color: #ffffff;
+  }
+  
+  h2 {
+    font-family: Georgia;
+    font-size: .24rem;
+    letter-spacing: .02rem;
+    color: #ffffff;
+    opacity: 0.5;
+  }
+}
+
+p {
+  line-height: 1.5;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.content1200 {
+  width: 12rem;
+  margin: 0 auto;
+}
+
+#headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1280px;
+  z-index: 999;
+  background: #fff;
+  font-size: .16rem;
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: .04rem;
+    background-color: #bc782f;
+    z-index: -1;
+  }
+  .header {
+    height: .8rem;
+    line-height: .8rem;
+    .logo {
+      a {
+        display: inline-block;
+        width: 1.54rem;
+        height: .48rem;
+        margin-top: .16rem;
+        background: url(../images/1headerAndBottom/logo.png) no-repeat left top;
+        background-size: contain;
+        vertical-align: top;
+      }
+    }
+    .nav {
+      >ul {
+        >li.navLi {
+          position: relative;
+          float: left;
+          margin: 0 .29rem;
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          &.active,
+          &:hover {
+            > a {
+              font-weight: bold;
+              color: #bc782f;
+            }
+          }
+          ul.secondMenu {
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            margin-top: .04rem;
+            background: rgba(255, 255, 255, .8);
+            font-size: .14rem;
+            &::before {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: .04rem;
+              left: 0;
+              transform: translateY(-100%);
+            }
+            li {
+              line-height: 1;
+              &.active,
+              &:hover {
+                background-image: linear-gradient(0deg, #e6b980 0%, #eacda3 100%);
+                a {
+                  font-family: 'MicrosoftYaHei-Bold';
+                  font-weight: bold;
+                  color: #fff;
+                }
+              }
+              a {
+                padding: .17rem .18rem;
+                white-space: nowrap;
+                color: #333;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#footerWrapper {
+  position: relative;
+  width: 100%;
+  padding: .55rem 0 .5rem 0;
+  background-color: #150303;
+  color: #fff;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: .08rem;
+    background-color: #bc782f;
+  }
+  a {
+    color: #fff;
+  }
+  dl {
+    width: 5.81rem;
+    font-size: .16rem;
+    dt,
+    dd {
+      display: inline-block;
+      height: .29rem;
+      line-height: .29rem;
+      margin-bottom: .54rem;
+    }
+    dt {
+      position: relative;
+      padding-left: .48rem;
+      margin-right: .54rem;
+      &:nth-child(1) {
+        background: url(../images/1headerAndBottom/9_connect_loca.png) no-repeat left center;
+      }
+      &:nth-child(3) {
+        background: url(../images/1headerAndBottom/10_connect_mail.png) no-repeat left center;
+      }
+      &:nth-child(5) {
+        background: url(../images/1headerAndBottom/11_connect_phone.png) no-repeat left center;
+      }
+      &::after {
+        content: '';
+        height: .15rem;
+        position: absolute;
+        right: -.19rem;
+        top: 50%;
+        transform: translateY(-50%);
+        border-right: 1px solid rgba($color: #dfdfdf, $alpha: 0.2);
+      }
+    }
+    dd{
+      min-width: 3.5rem;
+    }
+  }
+  ul.code {
+    margin-top: .07rem;
+    text-align: center;
+    li {
+      float: left;
+      margin: 0 .425rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      img {
+        width: 1.3rem;
+      }
+      p {
+        margin-top: .26rem;
+      }
+    }
+  }
+}
